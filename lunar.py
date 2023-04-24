@@ -31,8 +31,8 @@ class Lunar:
         return result
 
     def __pow__(self, other):
-        # The multiplication neutral element in Lunar arithmetic is the larger digit of the number
-        result = Lunar(max(int(digit) for digit in self.value))
+        # The multiplication neutral element in Lunar arithmetic is 9
+        result = 9
         for _ in range(int(other.value)):
             result *= self
         return result
